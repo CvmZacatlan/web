@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Dejar el idioma en español -->
+<head>
+  <meta charset="UTF-8"> <!-- Códificación para que se muestren los caracteres tal y como están -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Agregado para hacer la página responsiva -->
+  <title>Historia</title> <!-- Titulo de la página -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+	
+  <style>
+    /***********PROPIEDADES DEL BODY***********/
+    body {
+      margin: 0; /*Establece el margen del cuerpo de la página*/
+      padding: 0; /*Establece el relleno del cuerpo de la página*/ /*SE CAMBIÓ ESTA PROPIEDAD A COMO SE TENÍA*/ 
+      background-color: rgb(0, 0, 0); /*Color de la página*/
+      font-family: Arial, sans-serif; /* Tipo de fuente para mejorar la legibilidad */
+      margin-top: 0px; /* Igual a la altura del navbar */
+    }
+
+    /***********************ESTILOS PARA LOS DIV DE CADA CONTENIDO***********************/
+/* Estilos para la imagen superior */
+.imagen-superior {
+  position: fixed; /* Fija la posición de la imagen */
+  top: 0; /* La sitúa en la parte superior */
+  left: 0; /* La sitúa en la esquina izquierda */
+  width: 80%; /* La imagen ocupa todo el ancho */
+  z-index: -1; /* La imagen está detrás de otros elementos */
+}
+
+.imagen-superior img {
+  width: 50%; /* Ajusta el ancho de la imagen al 100% */
+}
+    /************ESTILOS PARA EL CONTENIDO DEL DIV 1***********************/
+    .contenido1 {
+      background-color: #2b2a2a; /*Color del fondo del Div*/
+      padding: 10px; /*Relleno para mejorar la apariencia*/
+      color:white;
+      overflow: hidden; 
+    }
+
+  /**************ESTILOS PARA EL CONTENIDO DEL DIV 2***********************/
+  .contenido2 {
+      padding: 10px; /*Relleno para mejorar la apariencia*/
+      overflow: hidden; 
+    } 
+
+  /**************ESTILOS PARA EL CONTENIDO DEL DIV 3***********************/
+  .contenido3 {
+      padding: 10px; /*Relleno para mejorar la apariencia*/
+      overflow: hidden; 
+    }
+
+  /**************ESTILOS PARA EL CONTENIDO DEL DIV 4***********************/
+  .contenido4 {
+      padding: 10px; /*Relleno para mejorar la apariencia*/
+      overflow: hidden; 
+    } 
+  
+  /*************CÓDIGO PARA EL FOOTER*******************/
+  /* Estilo del footer responsivo */
+  footer {
+  text-align: right;
+  padding: 20px;
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  text-align: center; /* Ubicación del texto el cual coresponde a Contactanos */
+  margin-bottom: 10px; /* Espacio entre el texto y la línea inferior */
+}
+
+.line, .line-vertical { /* Espacio entre el texto y la línea inferior */
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  margin: 20px 0; /* Espacio entre los logos y la línea */
+}
+
+.content-container {
+  display: flex;
+}
+
+.logos-column, .text-column {
+  flex-grow: 1;
+  padding-left: 5%; /*Espacio entre el texto y la linea*/
+  font-size: 20px; /* Tamaño del texto */
+}
+
+.logos-column {
+  display: flex;
+  justify-content: flex-end; /* Logos alineados a la derecha */
+  padding-right: 5%; /*Espacio entre el texto y la linea*/
+}
+
+.logos-column a {
+  margin-left: 2%; /* Espacio entre los logos y la línea vertical */
+}
+
+.logos-column img {
+  max-width: 50px;
+}
+
+.line-vertical {
+  width: 2px;
+  height: 60px; /* Altura de la línea vertical */
+  background-color: rgb(0, 0, 0);
+  margin: 0 50px; /* Espacio entre la línea vertical y el texto de dirección */
+}
+
+.direc-column {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.direc-column li {
+  text-align: left; /* Alinea el texto de dirección a la izquierda */
+  margin-bottom: 5px; /* Espacio entre la línea vertical y el texto de dirección */
+}
+
+
+/*********************ESTILOS ADICIONALES PARA LOS DIVS DE CONTENIDO******************/
+.contenido1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #5757f0;
+  color: white;
+  overflow: hidden;
+  position: relative; /* Asegura que el contenido absoluto esté relativo a este contenedor */
+  height: 300px; /* Definir una altura específica */
+}
+
+.contenido1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupar todo el ancho disponible */
+  height: 100%; /* Ocupar toda la altura disponible */
+  object-fit: cover; /* Ajustar el tamaño de la imagen para cubrir el contenedor */
+  opacity: 0.7; /* Añadir opacidad a la imagen */
+}
+
+.texto-superpuesto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  text-align: center;
+}
+
+.texto-superpuesto h1 {
+  font-size: 4em; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  text-decoration: underline; /* Subrayado */
+}
+
+
+    /***************CONTENIDO 2***********************/
+    .contenido2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #000000;
+      padding: 10px;
+      color: white;
+      overflow: hidden;
+    }
+
+    .contenido2 .seccion-historia {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #111010; /* Cambiado el color para distinguirlo del fondo principal */
+      padding: 10px;
+      color: white;
+      margin-top: 10px; /* Espacio entre la imagen y el texto */
+      text-align: center; /* Justificar el texto */
+    }   
+
+    .contenido2 .seccion-historia img {
+      width: 40%; /* Ajusta el tamaño de la imagen según sea necesario */
+      transition: opacity 0.5s ease;
+      cursor: pointer;
+    }
+  /**************************************/
+    /***********************CONTENIDO 3***********************/
+  .contenido3 {
+  background-color: rgb(95, 95, 95); /*Color del fondo del Div*/
+  padding: 10px; /*Relleno para mejorar la apariencia*/
+  color:white; /*Color de la letra*/
+  text-align: right; /* Alineación del Texto */
+  overflow: hidden; 
+    }
+
+    .contenido3 img {
+  float: left;
+  width: 50%;
+  height: 50%;
+  padding-left: 4%; /*Agrega un espacio de relleno*/
+  }
+
+    .columnatexto3{
+    text-align: justify;
+    padding-left: 52%;
+    padding-right: 1%; /*Agrega un espacio de relleno*/
+    font-size: 18px; /* Tamaño de la fuente deseado */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  .columnaimagen3{
+    padding-left: 10px; /*Agrega un espacio de relleno*/
+    padding-top: 0%;
+  }
+
+/*********************CONTENIDO 4******************/
+.contenido4 {
+  display: flex;
+  flex-direction: row; /* Cambiado a fila para colocar las secciones una al lado de la otra */
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 10px;
+  color: white;
+  overflow: hidden;
+}
+
+.contenido4 .seccion-historia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1919;  /* Cambiado el color para distinguirlo del fondo principal */
+  padding: 10px;
+  color: white;
+  margin-right: 10px; /* Espacio entre las secciones de historia */
+}
+
+.contenido4 .seccion-historia:last-child {
+  margin-right: 0; /* Eliminar el margen derecho del último elemento para evitar espacio adicional */
+}
+
+.contenido4 .seccion-historia img {
+  width: 200px; /* Ajusta el tamaño de la imagen según sea necesario */
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  filter: grayscale(50%) opacity(0.9); /* Aplica un efecto de escala de grises y opacidad */
+}
+
+</style>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="LogoOficial.png" height="80" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Historia.html">Historia</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Proyectos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proyectos
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Proyectos.html#300Zacatlan">300 años por ser Zacatlán <br>
+                de las Manzanas</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#UniversoNahuatl">Vivir en el universo Náhuatl</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#ZacatlanRecuerdos">Zacatlán de mis recuerdos</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#VidaEterna">La Vida Eterna</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#MexicoLindo">México Lindo y Querido</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#ZacatlanMundo">De Zacatlán para el Mundo</a></li>
+            </ul>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Productos.html">Productos</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  <!-- CONTENIDO DE LA HISTORIA  -->
+   <!---------------------------SECCIÓN CENTRAL DEL CONTENIDO 1 DE LA HISTORIA  ------------------>
+   <div class="contenido1">
+    <div class="seccion-historia">
+      <img src="13.jpeg" alt="Imagen Historia 1">
+      <div class="texto-superpuesto">
+        <h1>Historia</h1>
+      </div>
+    </div>
+  </div>
+
+  <!----------------------------->
+
+  <div class="contenido2">
+    <div class="seccion-historia">
+      <p class="texto-historia">
+El arte del vitromuralismo inicia en el año 2014 por la Mtra. Mary Carmen Olvera Trejo y el artista internacional Dick Davis, con el proyecto “El Universo Náhuatl” ubicado sobre el paseo de la Barranca de los Jilgueros 
+Mural que retrata las raíces prehispánicas, los 13 cielos y los 9 inframundos y dioses como Quetzalcóatl. 
+Siendo como siguiente proyecto, la idea de conmemorar los 300 años de la fundación de Zacatlán mismo que lleva por nombre “300 años por ser Zacatlán de las manzanas” con la participación de la artista internacional Trish Metzner Lynch. 
+Dicho mural reúne la historia de este bello pueblo mágico.
+Otro proyecto destacado es “Vida Eterna”, un mural que representa cuadros bíblicos y que se encuentra en el panteón municipal. Este proyecto inicia con el hermoso vitromural “Alas de Ángel”, un espacio reconocido por 
+ser un lugar especial para tomar fotos del recuerdo.
+      </p>
+      <img src="19.jpg" alt="Imagen Contenido 4">
+    </div>
+  </div>
+  
+  <div class="contenido3">
+    <h1>ACTUALMENTE</h1>
+  
+    <ul class="columnaimagen3">
+      <img src="20.jpg">
+    </ul>
+
+    <ul class="columnatexto3">
+      <p>
+        Hemos expandido este hermoso arte a nivel nacional e internacional, 
+        brindando a nuestros clientes la mejor atención y asegurando la más alta calidad 
+        en cada proyecto. Nuestro equipo de expertos trabaja con dedicación y creatividad 
+        para transformar espacios mediante vitromurales que no solo embellecen, sino que también 
+        cuentan historias y preservan tradiciones culturales. Nos enorgullece colaborar con diversas 
+        comunidades y ofrecer soluciones personalizadas que reflejan la identidad y el espíritu de cada lugar. 
+        Con un compromiso firme con la excelencia y la satisfacción del cliente, continuamos innovando y llevando 
+        el arte del vitromuralismo a nuevos horizontes.
+      </p>
+
+    </ul>
+  </div>
+
+  <div class="contenido4">
+    <div class="seccion-historia">
+      <h2>SALAS INTERACTIVAS</h2>
+      <p class="texto-historia">
+        La Casa del Vitromuralista abre sus puertas al público<br>
+         e invita a conocer las Salas temáticas con las que contamos.
+      </p>
+      <img src="21.jpg" alt="Imagen Contenido 2">
+    </div>
+    <div class="seccion-historia">
+      <h2>TALLERES</h2>
+      <p class="texto-historia">
+        Aprende del bello arte del vitromuralismo. <br>
+        ¡Descubre tu creatividad y únete a nosotros! 
+      </p>
+      <img src="3.jpeg" alt="Imagen Contenido 2">
+    </div>
+  </div>
+
+    <!---------------------FOOTER RESPONSIVO-------------------->
+    <footer style="background-image: url('12.jpeg');">
+      <h1>¡CONTÁCTANOS!</h1>
+      <div class="line"></div>
+      <div class="content-container">
+        <div class="logos-column">
+          <a href="https://wa.me/527971457320"><img class="LogoWhats" src="LOGO WHATSAPP.png" alt="Whatsapp"></a>
+           <a href="https://www.facebook.com/p/Casa-del-VitroMuralista-100086544412547/"><img class="Logoface" src="LOGO FACEBOOK.png" alt="Facebook"></a>
+          <a href="https://vm.tiktok.com/ZMMc9oxQW/"><img class="LogoTik" src="LOGO TIKTOK.png" alt="Tiktok"></a>
+          <a href="https://www.instagram.com/casa_del_vitromuralista/"><img class="LogoIg" src="LOGO INSTAGRAM.png" alt="Instagram"></a>
+        </div>
+        <div class="line-vertical"></div>
+        <div class="text-column">
+          <ul class="direc-column">
+            <li><a>Dirección: Callejón Linda Vista, Calle Porfirio Díaz <br> 73310 Zacatlan de las Manzanas, Puebla, Mexico</a></li>
+          </ul>        
+        </div>
+      </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

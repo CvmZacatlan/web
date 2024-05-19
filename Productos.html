@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Dejar el idioma en español -->
+<head>
+  <meta charset="UTF-8"> <!-- Códificación para que se muestren los caracteres tal y como están -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Agregado para hacer la página responsiva -->
+  <title>Productos</title> <!-- Titulo de la página -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+  <style>
+    /***********PROPIEDADES DEL BODY***********/
+    body {
+      margin: 0; /*Establece el margen del cuerpo de la página*/
+      padding: 0; /*Establece el relleno del cuerpo de la página*/ /*SE CAMBIÓ ESTA PROPIEDAD A COMO SE TENÍA*/ 
+      background-color: rgb(0, 0, 0); /*Color de la página*/
+      font-family: Arial, sans-serif; /* Tipo de fuente para mejorar la legibilidad */
+      margin-top: 0px; /* Igual a la altura del navbar */
+    }
+
+    /***********************ESTILOS PARA LOS DIV DE CADA CONTENIDO***********************/
+    /************ESTILOS PARA LA PRIMERA SECCIÓN DE PRODUCTOS***********************/
+    .contenido1 {
+      background-color: #2b2a2a; /*Color del fondo del Div*/
+      padding: 10px; /*Relleno para mejorar la apariencia*/
+      color:white;
+      overflow: hidden; 
+    }
+
+  /***********************ESTILOS PARA LA SEGUNDA SECCIÓN DE PRODUCTOS***********************/
+    .contenido2 {
+  background-color: rgb(95, 95, 95); /*Color del fondo del Div*/
+  padding: 10px; /*Relleno para mejorar la apariencia*/
+  color:white; /*Color de la letra*/
+  text-align: right; /* Alineación del Texto */
+  overflow: hidden; 
+    }
+
+  /***********************ESTILOS PARA LA TERCERA SECCIÓN DE PRODUCTOS***********************/
+    .contenido3 {
+      background-color: #000000; /*Color del fondo del Div*/
+      padding: 20px; /* Relleno para mejorar la apariencia */
+      color:white; /*Color de la letra*/
+      overflow: hidden;
+    }
+
+  /***********************ESTILOS PARA LA CUARTA SECCIÓN DE PRODUCTOS***********************/
+  .contenido4 {
+  background-color: rgb(95, 95, 95); /*Color del fondo del Div*/
+  padding: 10px; /*Relleno para mejorar la apariencia*/
+  color:white; /*Color de la letra*/
+  text-align: right; /* Alineación del Texto */
+  overflow: hidden;
+  }
+  
+  /*************CÓDIGO PARA EL FOOTER*******************/
+  /* Estilo del footer responsivo */
+  footer {
+  text-align: right;
+  padding: 20px;
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  text-align: center; /* Ubicación del texto el cual coresponde a Contactanos */
+  margin-bottom: 10px; /* Espacio entre el texto y la línea inferior */
+}
+
+.line, .line-vertical { /* Espacio entre el texto y la línea inferior */
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  margin: 20px 0; /* Espacio entre los logos y la línea */
+}
+
+.content-container {
+  display: flex;
+}
+
+.logos-column, .text-column {
+  flex-grow: 1;
+  padding-left: 5%; /*Espacio entre el texto y la linea*/
+}
+
+.logos-column {
+  display: flex;
+  justify-content: flex-end; /* Logos alineados a la derecha */
+  padding-right: 5%; /*Espacio entre el texto y la linea*/
+}
+
+.logos-column a {
+  margin-left: 2%; /* Espacio entre los logos y la línea vertical */
+}
+
+.logos-column img {
+  max-width: 50px;
+}
+
+.line-vertical {
+  width: 2px;
+  height: 60px; /* Altura de la línea vertical */
+  background-color: rgb(0, 0, 0);
+  margin: 0 50px; /* Espacio entre la línea vertical y el texto de dirección */
+}
+
+.direc-column {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.direc-column li {
+  text-align: left; /* Alinea el texto de dirección a la izquierda */
+  margin-bottom: 5px; /* Espacio entre la línea vertical y el texto de dirección */
+}
+
+/*************************DEMÁS CÓDIGO*********************************/
+.galeria {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .imagen {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      width: calc(20% - 20px); /* Ancho de cada imagen en la galería */
+      margin-bottom: 20px;
+    }
+
+    .imagen img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+
+    .descripcion {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      color: white;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .imagen:hover img {
+      transform: scale(1.1);
+    }
+
+    .imagen:hover .descripcion {     
+      opacity: 1;
+    }
+
+    footer {
+  position: relative;
+  filter: grayscale(50%) opacity(0.9); /* Aplica un efecto de escala de grises y opacidad */
+}
+</style>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="LogoOficial.png" height="80" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Historia.html">Historia</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Proyectos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proyectos
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Proyectos.html#300Zacatlan">300 años por ser Zacatlán <br>
+                de las Manzanas</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#UniversoNahuatl">Vivir en el universo Náhuatl</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#ZacatlanRecuerdos">Zacatlán de mis recuerdos</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#VidaEterna">La Vida Eterna</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#MexicoLindo">México Lindo y Querido</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#ZacatlanMundo">De Zacatlán para el Mundo</a></li>
+            </ul>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Productos.html">Productos</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!---------------CONTENIDOS DE LOS PRODUCTOS------------------->
+   <!---------------------------PRIMERA SECCIÓN DE PRODUCTOS------------------>
+   <div class="contenido1"> <!-- Cambiar a Productos -->
+    <h1>VITROMURAL EN PARED</h1>
+    <!--------------------------- Imagen 1 ----------------------------->
+    <div class="galeria">
+      <div class="imagen" onclick="abrirVentanaModal(1)">
+        <img src="5.jpeg" alt="Nombre del Producto 1">
+        <div class="descripcion">
+          <h3>VitroMural Plano</h3>
+          <p>Precio: $8,000.00 MXN Aprox</p>
+        </div>
+      </div>
+     <!--------------------------- Imagen 2 ----------------------------->
+      <div class="imagen" onclick="abrirVentanaModal(1)">
+        <img src="22.jpg" alt="Nombre del Producto 2">
+        <div class="descripcion">
+          <h3>VitroMural Foto (VM2)</h3>
+          <p>Precio: $10,000.00 MXN Aprox</p>
+        </div>
+      </div>
+      <!--------------------------- Imagen 3 ----------------------------->
+      <div class="imagen" onclick="abrirVentanaModal(1)">
+        <img src="P1.jpg" alt="Nombre del Producto 3">
+        <div class="descripcion">
+          <h3>VitroMural Rostro (VM3)</h3>
+          <p>Precio: $12,000.00 MXN Aprox</p>
+        </div>
+      </div>
+      <!--------------------------- Imagen 4 ----------------------------->
+      <div class="imagen" onclick="abrirVentanaModal(1)">
+        <img src="2.jpeg" alt="Nombre del Producto 4">
+        <div class="descripcion">
+          <h3>VitroMural Especial (VM3) (Quetzalcoatl)</h3>
+          <p>Precio: $12,000.00 MXN Aprox</p>
+        </div>
+      </div>     
+    </div>
+  </div>
+
+  <!---------------------------SEGUNDA SECCIÓN DE PRODUCTOS------------------>
+  <div class="contenido2">
+    <h1>DESARROLLO (22 X 2.5 m)</h1>
+        <!--------------------------- Imagen 1 ----------------------------->
+  <div class="galeria">
+    <div class="imagen" onclick="abrirVentanaModal(1)">
+      <img src="P5.jpg" alt="Nombre del Producto 1">
+      <div class="descripcion">
+        <h3>Paisajes</h3>
+        <p>Precio: $112,000.00 m2 MXN Aprox</p>
+      </div>
+    </div>
+ 
+  </div> 
+  </div>
+
+    <!---------------------------TERCERA SECCIÓN DE PRODUCTOS------------------>
+  <div class="contenido3">
+    <h1>OTROS</h1>
+
+  <div class="galeria">
+    <!--------------------------- Imagen 2 ----------------------------->
+    <div class="imagen" onclick="abrirVentanaModal(1)">
+      <img src="24.jpg" alt="Nombre del Producto 2">
+      <div class="descripcion">
+        <h3>Rostros</h3>
+        <p>Precio: $5,000.00 MXN Aprox</p>
+      </div>
+    </div>
+    <!--------------------------- Imagen 3 ----------------------------->
+    <div class="imagen" onclick="abrirVentanaModal(1)">
+      <img src="23.jpg" alt="Nombre del Producto 3">
+      <div class="descripcion">
+        <h3>Retratos Conmemorativos </h3>
+        <p>Precio: $18,000.00 m2 MXN Aprox</p>
+      </div>
+    </div>
+    <!--------------------------- Imagen 4 ----------------------------->
+    <div class="imagen" onclick="abrirVentanaModal(1)">
+      <img src="14.jpeg" alt="Nombre del Producto 4">
+      <div class="descripcion">
+        <h3>Siluetas</h3>
+        <p>Precio: $12,000.00 MXN Aprox</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <!---------------------FOOTER RESPONSIVO-------------------->
+    <footer style="background-image: url('12.jpeg');">
+      <h1>¡CONTÁCTANOS!</h1>
+      <div class="line"></div>
+      <div class="content-container">
+        <div class="logos-column">
+          <a href="https://wa.me/527971457320"><img class="LogoWhats" src="LOGO WHATSAPP.png" alt="Whatsapp"></a>
+           <a href="https://www.facebook.com/p/Casa-del-VitroMuralista-100086544412547/"><img class="Logoface" src="LOGO FACEBOOK.png" alt="Facebook"></a>
+          <a href="https://vm.tiktok.com/ZMMc9oxQW/"><img class="LogoTik" src="LOGO TIKTOK.png" alt="Tiktok"></a>
+          <a href="https://www.instagram.com/casa_del_vitromuralista/"><img class="LogoIg" src="LOGO INSTAGRAM.png" alt="Instagram"></a>
+        </div>
+        <div class="line-vertical"></div>
+        <div class="text-column">
+          <ul class="direc-column">
+            <li><a>Dirección: Callejón Linda Vista, Calle Porfirio Díaz <br> 73310 Zacatlan de las Manzanas, Puebla, Mexico</a></li>
+          </ul>        
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!---------------------CÓDIGO JAVASCRIPT PARA EL EFECTO DE ZOOM DE LAS IMAGENES-------------------->
+<script>
+  function abrirVentanaModal(id) {
+  var modal = document.createElement("div");
+  modal.className = "modal";
+  modal.innerHTML = '<span class="cerrar" onclick="cerrarVentanaModal()">&times;</span><img src="imagen' + id + '.jpg" alt="Nombre del Producto ' + id + '">';
+  document.body.appendChild(modal);
+  document.body.style.overflow = "hidden";
+}
+
+function cerrarVentanaModal() {
+  var modal = document.querySelector(".modal");
+  modal.parentNode.removeChild(modal);
+  document.body.style.overflow = "auto";
+}
+
+</script>
+</body>
+</html>

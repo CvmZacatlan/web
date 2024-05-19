@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Dejar el idioma en español -->
+<head>
+  <meta charset="UTF-8"> <!-- Códificación para que se muestren los caracteres tal y como están -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Agregado para hacer la página responsiva -->
+  <title>Proyectos</title> <!-- Titulo de la página -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+	
+  <style>
+    /***********PROPIEDADES DEL BODY***********/
+    body {
+      margin: 0; /*Establece el margen del cuerpo de la página*/
+      padding: 0; /*Establece el relleno del cuerpo de la página*/ /*SE CAMBIÓ ESTA PROPIEDAD A COMO SE TENÍA*/ 
+      background-color: rgb(0, 0, 0); /*Color de la página*/
+      font-family: Arial, sans-serif; /* Tipo de fuente para mejorar la legibilidad */
+      margin-top: 0px; /* Igual a la altura del navbar */
+    }
+ 
+  /*************CÓDIGO PARA EL FOOTER*******************/
+  /* Estilo del footer responsivo */
+  footer {
+  text-align: right;
+  padding: 20px;
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  text-align: center; /* Ubicación del texto el cual coresponde a Contactanos */
+  margin-bottom: 10px; /* Espacio entre el texto y la línea inferior */
+}
+
+.line, .line-vertical { /* Espacio entre el texto y la línea inferior */
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  margin: 20px 0; /* Espacio entre los logos y la línea */
+}
+
+.content-container {
+  display: flex;
+}
+
+.logos-column, .text-column {
+  flex-grow: 1;
+  padding-left: 5%; /*Espacio entre el texto y la linea*/
+}
+
+.logos-column {
+  display: flex;
+  justify-content: flex-end; /* Logos alineados a la derecha */
+  padding-right: 5%; /*Espacio entre el texto y la linea*/
+}
+
+.logos-column a {
+  margin-left: 2%; /* Espacio entre los logos y la línea vertical */
+}
+
+.logos-column img {
+  max-width: 50px;
+}
+
+.line-vertical {
+  width: 2px;
+  height: 60px; /* Altura de la línea vertical */
+  background-color: rgb(0, 0, 0);
+  margin: 0 50px; /* Espacio entre la línea vertical y el texto de dirección */
+}
+
+.direc-column {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.direc-column li {
+  text-align: left; /* Alinea el texto de dirección a la izquierda */
+  margin-bottom: 5px; /* Espacio entre la línea vertical y el texto de dirección */
+}
+
+/***********************ESTILOS PARA EL COLLAGE DE CADA DIV***********************/
+    /************ESTILOS PARA EL DIV DE CONTENIDO 1***********************/
+    .contenido1 {
+      background-color: #2b2a2a;
+      padding: 10px; /*Relleno para mejorar la apariencia*/
+      color:white; /*Color de la letra*/
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 150px);
+      gap: 10px;
+      overflow: hidden;
+    }
+
+    .contenido1 h1 {
+      grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+      text-align: center; /* Centrar horizontalmente */
+      padding: 2%; 
+    }
+
+    /********** ESTILOS PARA CADA BLOQUE DENTRO DE CONTENIDO 1 **********/
+    .bloque1 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background-color: #13bbbb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    }
+
+    .bloque2 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #4013bb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    }
+
+    .bloque3 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bbb813;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */ 
+    }
+
+    .bloque4 {
+      grid-column: span 2;
+      grid-row: span 1;
+      background-color: #bb139f;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    }
+
+    .bloque5 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bb1359;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    } 
+  
+  /*****************************************************/ 
+  /*********** ESTILOS para BLOQUE 1 **********/ 
+   .bloque1 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 1*******/
+    .visualizacion1 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion1 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque1:hover .visualizacion1 {
+      display: block;
+    }
+/**************************************************************************/ 
+  /*****************************************************/ 
+  /*********** ESTILOS para BLOQUE 2 **********/ 
+  .bloque2 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 2*******/
+    .visualizacion2 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion2 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque2:hover .visualizacion2 {
+      display: block;
+    }
+/**************************************************************************/ 
+  /*****************************************************/ 
+  /*********** ESTILOS para BLOQUE 3 **********/ 
+  .bloque3 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 3*******/
+    .visualizacion3 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion3 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque3:hover .visualizacion3 {
+      display: block;
+    }
+/**************************************************************************/
+  /*****************************************************/ 
+  /*********** ESTILOS para BLOQUE 4 **********/ 
+  .bloque4 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 4*******/
+    .visualizacion4 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion4 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque4:hover .visualizacion4 {
+      display: block;
+    }
+/**************************************************************************/
+  /*****************************************************/ 
+  /*********** ESTILOS para BLOQUE 5 **********/ 
+  .bloque5 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 5*******/
+    .visualizacion5 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion5 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque5:hover .visualizacion5 {
+      display: block;
+    }
+/**************************************************************************/ 
+
+/****************************************************************************************/
+/**********************ESTILOS PARA EL DIV DE CONTENIDO 2*************************/
+.contenido2 {
+  background-color: rgb(95, 95, 95); /*Color del fondo del Div*/
+  padding: 10px; /*Relleno para mejorar la apariencia*/
+  color:white; /*Color de la letra*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  gap: 10px;
+  overflow: hidden; 
+    }
+
+    .contenido2 h1 {
+      grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+      text-align: center; /* Centrar horizontalmente */
+      padding: 2%; 
+    }
+    /********** ESTILOS PARA CADA BLOQUE DENTRO DE CONTENIDO 2 **********/
+    .bloque6 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background-color: #13bbbb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    }
+
+    .bloque7 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #4013bb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+
+    }
+
+    .bloque8 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bbb813;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    .bloque9 {
+      grid-column: span 2;
+      grid-row: span 1;
+      background-color: #bb139f;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    .bloque10 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bb1359;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    /*********** ESTILOS para BLOQUE 6 **********/ 
+    .bloque6 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 6*******/
+    .visualizacion6 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion6 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque6:hover .visualizacion6 {
+      display: block;
+    }
+ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 7 **********/ 
+    .bloque7 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 7*******/
+ .visualizacion7 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion7 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque7:hover .visualizacion7 {
+      display: block;
+    }
+/**************************************************************************/
+
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 8 **********/ 
+.bloque8 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 8*******/
+ .visualizacion8 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion8 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque8:hover .visualizacion8 {
+      display: block;
+    }
+/**************************************************************************/ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 9 **********/ 
+.bloque9 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 9*******/
+ .visualizacion9 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion9 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque9:hover .visualizacion9 {
+      display: block;
+    }
+/**************************************************************************/ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 10 **********/ 
+.bloque10 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 10*******/
+ .visualizacion10 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion10 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque10:hover .visualizacion10 {
+      display: block;
+    }
+/******************************EDICIÓN AQUÍ********************************************/
+/***************************************************************************************/
+/***********************ESTILOS PARA EL DIV DE CONTENIDO 3***********************/
+.contenido3 {
+      background-color: #2b2a2a; /*Color del fondo del Div*/
+      padding: 10px; /* Relleno para mejorar la apariencia */
+      color:white; /*Color de la letra*/
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 150px);
+      gap: 10px;
+    }
+
+    .contenido3 h1 {
+      grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+      text-align: center; /* Centrar horizontalmente */
+      padding: 2%; 
+    }
+    /********** ESTILOS PARA CADA BLOQUE DENTRO DE CONTENIDO 3 **********/
+    .bloque11 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background-color: #13bbbb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    }
+
+    .bloque12 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #4013bb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+
+    }
+
+    .bloque13 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bbb813;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    .bloque14 {
+      grid-column: span 2;
+      grid-row: span 1;
+      background-color: #bb139f;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    .bloque15 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bb1359;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    /*********** ESTILOS para BLOQUE 11 **********/ 
+    .bloque11 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 11*******/
+    .visualizacion11 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion11 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque11:hover .visualizacion11 {
+      display: block;
+    }
+ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 12 **********/ 
+    .bloque12 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 12*******/
+ .visualizacion12 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion12 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque12:hover .visualizacion12 {
+      display: block;
+    }
+/**************************************************************************/
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 13 **********/ 
+.bloque13 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 13*******/
+ .visualizacion13 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion13 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque13:hover .visualizacion13 {
+      display: block;
+    }
+/**************************************************************************/ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 14 **********/ 
+.bloque14 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 14*******/
+ .visualizacion14 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion14 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque14:hover .visualizacion14 {
+      display: block;
+    }
+/**************************************************************************/ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 15 **********/ 
+.bloque15 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 15*******/
+ .visualizacion15 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion15 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque15:hover .visualizacion15 {
+      display: block;
+    }
+/****************************** EDICIÓN AQUÍ 2********************************************/
+/***********************ESTILOS PARA EL DIV DE CONTENIDO 4***********************/
+ .contenido4 {
+  background-color: rgb(95, 95, 95); /*Color del fondo del Div*/
+  padding: 10px; /*Relleno para mejorar la apariencia*/
+  color:white; /*Color de la letra*/
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  gap: 10px;
+  }
+
+    .contenido4 h1 {
+      grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+      text-align: center; /* Centrar horizontalmente */
+      padding: 2%; 
+    }
+    /********** ESTILOS PARA CADA BLOQUE DENTRO DE CONTENIDO 4 **********/
+    .bloque16 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background-color: #13bbbb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion6 sea relativo a este div */
+    }
+
+    .bloque17 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #4013bb;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+
+    }
+
+    .bloque18 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bbb813;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    .bloque19 {
+      grid-column: span 2;
+      grid-row: span 1;
+      background-color: #bb139f;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    .bloque20 {
+      grid-column: span 1;
+      grid-row: span 1;
+      background-color: #bb1359;
+      position: relative; /* Establece el posicionamiento relativo para que el posicionamiento absoluto de .visualizacion7 sea relativo a este div */
+    }
+
+    /*********** ESTILOS para BLOQUE 16 **********/ 
+    .bloque16 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+  /***************************************************/
+    /*******ESTILOS PARA LA VISUALIZACIÓN 16*******/
+    .visualizacion16 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion16 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque16:hover .visualizacion16 {
+      display: block;
+    }
+ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 17 **********/ 
+    .bloque17 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 17*******/
+ .visualizacion17 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion17 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque17:hover .visualizacion17 {
+      display: block;
+    }
+/**************************************************************************/
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 18 **********/ 
+.bloque18 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 18*******/
+ .visualizacion18 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion18 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque18:hover .visualizacion18 {
+      display: block;
+    }
+/**************************************************************************/ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 19 **********/ 
+.bloque19 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 19*******/
+ .visualizacion19 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion19 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque19:hover .visualizacion19 {
+      display: block;
+    }
+/**************************************************************************/ 
+/**************************************************************************/ 
+/*********** ESTILOS para BLOQUE 20 **********/ 
+.bloque20 img 
+  {
+  width: 100%; /* Ajusta el ancho de la imagen para que se ajuste al tamaño del bloque */
+  height: 100%; /* Ajusta la altura de la imagen para que se ajuste al tamaño del bloque */
+  object-fit: cover; /* Hace que la imagen cubra completamente el espacio del bloque */
+  /* Cambiar a cover si quiero que abarque todo el espacio */
+  }
+
+ /*******ESTILOS PARA LA VISUALIZACIÓN 20*******/
+ .visualizacion20 {
+  position: fixed; /* Cambiar a 'fixed' para que la visualización no esté limitada por el contenedor */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar la visualización */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: calc(100vw - 40px); /* Utilizar el ancho de la ventana del navegador menos el espacio de padding */
+  max-height: calc(100vh - 40px); /* Utilizar la altura de la ventana del navegador menos el espacio de padding */
+  overflow: auto;
+  display: none;
+  z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+    .visualizacion20 img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Estilo para mostrar la visualización al hacer clic */
+    .bloque20:hover .visualizacion20 {
+      display: block;
+    }
+/**************************************************************************/ 
+/****************************** EDICIÓN AQUÍ SIGUIENTE********************************************/
+  /***********************ESTILOS PARA EL DIV DEL CONTENIDO 5***********************/
+  .contenido5 {
+      background-color: #000000; /*Color del fondo del Div*/
+      padding: 10px; /* Relleno para mejorar la apariencia */
+      color:white; /*Color de la letra*/
+      overflow: hidden;
+      display: grid;
+      gap: 10px;
+      text-align: center; /* Centrar horizontalmente */
+      justify-content: center;
+    }
+
+    .contenido5 h1 {
+      text-align: center; /* Centrar horizontalmente */
+      padding: 2%; 
+    }
+
+    .contenido5 img {
+    max-width: 100%; /* Ajustar la imagen al 100% del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-top: 10px; /* Espacio superior para separar del texto */
+    opacity: 0.8; /* Ajustar la opacidad si es necesario */
+    }
+    /********** ESTILOS PARA CADA BLOQUE DENTRO DE CONTENIDO 5 **********/
+ 
+/**************************************************************************/ 
+
+/*************************CONTENIDO 6*************************************************/ 
+  /***********************ESTILOS PARA EL DIV DEL CONTENIDO 6***********************/
+  .contenido6 {
+  background-color: rgb(95, 95, 95); /*Color del fondo del Div*/
+  padding: 10px; /*Relleno para mejorar la apariencia*/
+  color:white; /*Color de la letra*/
+  display: grid;
+  gap: 10px;
+  overflow: hidden;
+  }
+    .contenido6 h1 {
+      grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+      text-align: center; /* Centrar horizontalmente */
+      padding: 2%; 
+    }
+
+    .contenido6 p {
+      text-align: center; /* Centrar horizontalmente */
+    }
+/**************************************************************************/ 
+footer {
+  position: relative;
+  filter: grayscale(50%) opacity(0.9); /* Aplica un efecto de escala de grises y opacidad */
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="LogoOficial.png" height="80" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="Historia.html">Historia</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="Proyectos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proyectos
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Proyectos.html#300Zacatlan">300 años por ser Zacatlán <br>
+                de las Manzanas</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#UniversoNahuatl">Vivir en el universo Náhuatl</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#ZacatlanRecuerdos">Zacatlán de mis recuerdos</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#VidaEterna">La Vida Eterna</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#MexicoLindo">México Lindo y Querido</a></li>
+              <li><a class="dropdown-item" href="Proyectos.html#ZacatlanMundo">De Zacatlán para el Mundo</a></li>
+            </ul>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Productos.html">Productos</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-------------------------- CONTENIDOS -------------------------------------->
+   <!---------------------------CONTENIDO 1: 300 AÑOS POR SER ZACATLÁN DE LAS MANZANAS------------------>
+  <div id="300Zacatlan" class="contenido1"> 
+    <h1>300 años por ser Zacatlán de las manzanas</h1>
+
+    <div class="bloque1">
+      <img src="19.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion1">
+        <img src="19.jpg" alt="Descripción de la imagen">
+        <p>En el año 1714 nos consolidamos como Zacatlán de las Manzanas, 
+          siendo en el año 2014 cuando festejamos 300 años de llevar el nombramiento. </p>
+      </div>
+    </div>
+
+    <div class="bloque2">
+      <img src="P3.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion2">
+        <img src="P3.jpg" alt="Descripción de la imagen">
+        <p>La realización de este mural se llevó acabo en dos etapas,
+        la primera el 7 de diciembre de 2014 y la segunda el 24 de Marzo de 2015.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque3">
+      <img src="25.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion3">
+        <img src="25.jpg" alt="Descripción de la imagen">
+        <p>El mural se encuentra sobre el Paseo de la Barranca de Los Jilgueros,
+           donde se localiza El Mirador, lugar destacable en Zacatlán.</p>
+      </div>  
+    </div>
+
+    <div class="bloque4">
+      <img src="26.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion4">
+        <img src="26.jpg" alt="Descripción de la imagen">
+        <p>Fabricado con pequeñas piezas de mosaico, azulejo 
+          y cristales de diversos colores.</p>
+      </div> 
+    </div>
+  </div>
+ 
+  <!---------------------------CONTENIDO 2: VIVIR EN EL UNIVERSO NÁHUATL------------------>
+
+  <div id="UniversoNahuatl" class="contenido2">
+      <h1>Vivir en el universo Náhuatl</h1>
+      
+      <div class="bloque6">
+        <img src="28.jpg" alt="Descripción de la imagen">
+        <div class="visualizacion6">
+          <img src="28.jpg" alt="Descripción de la imagen">
+          <p>Los 13 Cielos y los 9 Inframundos</p>
+          <p>El mundo celeste conformado por 13 cielos, en el más alto o cielo doble, 
+            donde vivían los dioses creadores y los niños y se engendran las almas de los hombres, 
+            alimentadas por un árbol que da leche: los siguientes contienen, nubes, luna, estrellas errantes,
+            cometas y la vía Láctea.
+          </p>
+        </div>
+      </div>
+     
+      <div class="bloque7">
+        <img src="2.jpeg" alt="Descripción de la imagen">
+        <div class="visualizacion7">
+          <img src="2.jpeg" alt="Descripción de la imagen">
+          <p>El Quetzalcoatl</p>
+          <p>Se transforma en sol y crea al hombre de máiz, es el viento que 
+            trae las lluvias y el soplo vital que anima al recién nacido. El maíz cuyas hojas verdes
+          se comparan con las plumas del quetzal, simbolo de lo precioso, las mazorcas se confunden
+          con las escamas de su cuerpo. </p>
+        </div>        
+      </div>
+
+      <div class="bloque8">
+        <img src="29.jpg" alt="Descripción de la imagen">
+        <div class="visualizacion8">
+          <img src="29.jpg" alt="Descripción de la imagen">
+          <p>"El resplandeciente, niño precioso, águila que asciende". Al nacer en el oriente, 
+            parido por la Tierra, como el Sol joven, guerrero, venció los poderes nocturnos,
+            acompañado por sacrificados, hasta llegar al cenit. 
+
+          </p>
+        </div> 
+      </div>
+
+      <div class="bloque9">
+        <img src="30.jpg" alt="Descripción de la imagen">
+        <div class="visualizacion9">
+          <img src="30.jpg" alt="Descripción de la imagen">
+          <p>El Colibrí</p>
+          <p>Simbolo de resurreción entre los mexicas; los guerreros que morían luchando
+            valerosamente, acompañaban al sol en su camino a través del cielo y volvían a la vida
+            como colibríes.
+          </p>
+        </div> 
+      </div>
+  </div>
+
+  <!---------------------------CONTENIDO 3: ZACATLÁN DE MIS RECUERDOS------------------>
+  <div id="ZacatlanRecuerdos" class="contenido3">
+    <h1>Zacatlán de mis recuerdos</h1>
+
+    <div class="bloque11">
+      <img src="12.jpeg" alt="Descripción de la imagen">
+      <div class="visualizacion11">
+        <img src="12.jpeg" alt="Descripción de la imagen">
+        <p>Tras la realización de este mural se plasmaron 
+          diferentes escenarios de cómo lucía Zacatlán años atrás.</p>
+      </div>
+    </div>
+   
+    <div class="bloque12">
+      <img src="22.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion12">
+        <img src="22.jpg" alt="Descripción de la imagen">
+        <p>Un proyecto comunitario para dignificar el "Callejón del Hueso".</p>
+      </div>        
+    </div>
+
+    <div class="bloque13">
+      <img src="18.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion13">
+        <img src="18.jpg" alt="Descripción de la imagen">
+        <p>Se incluyeron representaciones de Trajes tipicos.</p>
+      </div> 
+    </div>
+
+    <div class="bloque14">
+      <img src="31.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion14">
+        <img src="31.jpg" alt="Descripción de la imagen">
+        <p>Representaciones de lugares emblemáticos como el Centro de Zacatlán.</p>
+      </div> 
+    </div>
+
+    <div class="bloque15">
+      <img src="32.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion15">
+        <img src="32.jpg" alt="Descripción de la imagen">
+        <p>Murales llenos de colores y técnicas con perspectiva y relieves.</p>
+      </div> 
+    </div>
+
+  </div>
+
+  <!---------------------------CONTENIDO 4: LA VIDA ETERNA------------------>
+  <div id="VidaEterna" class="contenido4">
+    <h1>La vida eterna</h1>
+
+    <div class="bloque16">
+      <img src="17.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion16">
+        <img src="17.jpg" alt="Descripción de la imagen">
+        <p>La resurreción de los muertos</p>
+        <p>Le dijo Jesús: Yo soy la resurreción y la vida, el que cree en mí,
+          aunque haya muerto, vivirá. (Juan 11,25)
+        </p>
+      </div>
+    </div>
+   
+    <div class="bloque17">
+      <img src="35.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion17">
+        <img src="35.jpg" alt="Descripción de la imagen">
+        <p>Alas del ángel, Aureola y Pedacito de Cielo</p>
+        <p>Un recuerdo de su visita al mural "La vida eterna".</p>
+      </div>        
+    </div>
+
+    <div class="bloque18">
+      <img src="27.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion18">
+        <img src="27.jpg" alt="Descripción de la imagen">
+        <p>La Creación</p>
+        <p>Dios dijo después: Que haya cuerpos luminosos en el firmamento del cielo
+          que distingan el día de la noche, y señalen los tiempos o las estaciones, 
+          los días y los años (Génesis 1:14) </p>
+      </div> 
+    </div>
+
+    <div class="bloque19">
+      <img src="33.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion19">
+        <img src="33.jpg" alt="Descripción de la imagen">
+        <p>El Paraíso</p>
+        <p>Dios puso a Adán y Eva en el jardín del Éden el paraíso y para probar su 
+          fidelidad y obediencia les dió el mandato de comer de todos los frutos del árbol
+          del huerto, excepto uno, el fruto prohibido (Génesis 2:15)
+        </p>
+      </div> 
+    </div>
+
+    <div class="bloque20">
+      <img src="34.jpg" alt="Descripción de la imagen">
+      <div class="visualizacion20">
+        <img src="34.jpg" alt="Descripción de la imagen">
+        <p>La anunciación</p>
+        <p>El ángel le dijo: No temas, María, porque has hallado gracia
+          delante de Dios, vas a concebir en el seno y vas a dar a luz un hijo. A quien
+        pondrás por nombre Jesús. Él será grande y será llamado Hijo del Altísimo (San Lucas 1:26-38)</p>
+      </div> 
+    </div>
+
+  </div>
+
+  <!---------------------------CONTENIDO 5: MÉXICO LINDO Y QUERIDO------------------>
+  <div id="MexicoLindo" class="contenido5">
+    <h1>México Lindo y Querido</h1>
+      <p>Este Proyecto engloba los trajes típicos de cada Estado de la República Méxicana.</p>
+      <img src="13.jpeg" alt="Descripción de la imagen">
+  </div>
+
+  <!---------------------------CONTENIDO 6: DE ZACATLÁN PARA EL MUNDO------------------>
+  <div id="ZacatlanMundo" class="contenido6">
+    <h1>De Zacatlán para el Mundo</h1>
+    <p>Este Proyecto engloba la vestimenta típica de cada País del mundo.</p>
+  </div>
+
+    <!---------------------FOOTER RESPONSIVO-------------------->
+    <footer style="background-image: url('12.jpeg');">
+      <h1>¡CONTÁCTANOS!</h1>
+      <div class="line"></div>
+      <div class="content-container">
+        <div class="logos-column">
+          <a href="https://wa.me/527971457320"><img class="LogoWhats" src="LOGO WHATSAPP.png" alt="Whatsapp"></a>
+           <a href="https://www.facebook.com/p/Casa-del-VitroMuralista-100086544412547/"><img class="Logoface" src="LOGO FACEBOOK.png" alt="Facebook"></a>
+          <a href="https://vm.tiktok.com/ZMMc9oxQW/"><img class="LogoTik" src="LOGO TIKTOK.png" alt="Tiktok"></a>
+          <a href="https://www.instagram.com/casa_del_vitromuralista/"><img class="LogoIg" src="LOGO INSTAGRAM.png" alt="Instagram"></a>
+        </div>
+        <div class="line-vertical"></div>
+        <div class="text-column">
+          <ul class="direc-column">
+            <li><a>Dirección: Callejón Linda Vista, Calle Porfirio Díaz <br> 73310 Zacatlan de las Manzanas, Puebla, Mexico</a></li>
+          </ul>        
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+</body>
+</html>
+
